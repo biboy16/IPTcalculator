@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calcback"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/calculatorEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:inputType="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="0"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:id="@+id/buttonsGridLayout"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculatorEditText"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:columnOrderPreserved="false"
+        android:layout_centerHorizontal="true">
+
+    </GridLayout>
+    <Button
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/buttonsGridLayout"
+        android:layout_marginTop="20dp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_columnSpan="2"
+        android:text="Clear"
+        android:onClick="clearInput"
+        android:backgroundTint="@color/pink"
+        android:layout_gravity="fill_horizontal"/>
+
+    <TextView
+        android:id="@+id/historyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:padding="8dp"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/white"
+        android:text="History"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/pink"
+        android:layout_margin="16dp"
+        android:text="History"
+        android:onClick="showHistory" />
+
+</RelativeLayout>
